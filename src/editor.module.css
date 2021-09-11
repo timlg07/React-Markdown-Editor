@@ -1,0 +1,56 @@
+.container {
+	display: flex;
+	justify-content: space-evenly;
+
+	width: 100%;
+	height: 100%;
+}
+
+.input, .output {
+	width: 50%;
+	height: 100%;
+	padding: 2em;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.vertical.container {
+	flex-direction: column;
+}
+.vertical .input,
+.vertical .output {
+	width: 100%;
+	height: 50%;
+}
+
+.input .text, .output .text {
+	flex-grow: 1;
+	min-height: 2em;
+	width: 100%;
+
+	border-radius: 4px;
+	padding: 1em;
+}
+
+.input .text {
+	outline: none;
+	border: 2px solid var(--clr-fg-1);
+	transition: border .25s;
+
+	background: transparent;
+	color: var(--clr-fg-1);
+
+	resize: none;
+}
+
+.input .text:focus {
+	border: 2px solid var(--clr-fg-2);
+}
+
+.output .text {
+	background: var(--clr-bg-2);
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
