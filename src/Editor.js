@@ -31,7 +31,7 @@ class Editor extends React.Component {
         return (
             <div className={className}>
                 <div className={styles.input}>
-                    <h3>Input</h3>
+                    <span className={styles.header}>Input</span>
                     <textarea
                         className={styles.text}
                         onChange={this.handleChange}
@@ -39,7 +39,7 @@ class Editor extends React.Component {
                     />
                 </div>
                 <div className={styles.output}>
-                    <h3>Preview</h3>
+                    <span className={styles.header}>Preview</span>
                     <div 
                         className={styles.text}
                         dangerouslySetInnerHTML={this.getRawMarkup()}

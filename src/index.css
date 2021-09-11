@@ -14,7 +14,7 @@ body {
 	height: 100vh;
 	width : 100%;
 
-    font: 14px Segoe, sans-serif;
+    font-family: Segoe, sans-serif;
 	
 	background: var(--clr-bg-1);
 	color: var(--clr-fg-1);

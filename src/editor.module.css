@@ -54,3 +54,9 @@
 	word-wrap: break-word;
 	hyphens: auto;
 }
+
+.header {
+	font-size: 1.1rem;
+	margin: .5rem;
+	font-weight: lighter;
+}
