@@ -9,7 +9,7 @@ const cx = classNames.bind(styles)
 class Editor extends React.Component {
     
     state = { 
-        value: ''
+        value: this.props.placeholder || ''
     }
 
     handleChange = event => {
