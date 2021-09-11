@@ -27,6 +27,7 @@
 .input .text, .output .text {
 	flex-grow: 1;
 	min-height: 2em;
+	overflow: auto;
 	width: 100%;
 
 	border-radius: 4px;
