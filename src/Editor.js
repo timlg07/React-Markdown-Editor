@@ -7,20 +7,23 @@ const cx = classNames.bind(styles)
 
 
 class Editor extends React.Component {
-    
-    state = { 
+
+    state = {
         value: this.props.placeholder || ''
     }
 
     handleChange = event => {
-        this.setState({ 
+        this.setState({
             value: event.target.value
         })
     }
 
     getRawMarkup() {
-        const md = new Remarkable()
-        return {__html: md.render(this.state.value)}
+        const md = new Remarkable('full', {
+            html: true,
+            typographer: true,
+        })
+        return { __html: md.render(this.state.value) }
     }
 
     render() {
@@ -40,11 +43,11 @@ class Editor extends React.Component {
                 </div>
                 <div className={styles.output}>
                     <span className={styles.header}>Preview</span>
-                    <div 
+                    <div
                         className={styles.text}
                         dangerouslySetInnerHTML={this.getRawMarkup()}
                     >
-                </div>
+                    </div>
                 </div>
             </div>
         )
